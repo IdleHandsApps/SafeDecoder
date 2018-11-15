@@ -1,9 +1,9 @@
 //
 //  KeyedDecodingErrorContainer.swift
-//  Neighbourly
+//  IdleHandsApps
 //
-//  Created by Fraser on 1/03/18.
-//  Copyright © 2018 Neighbourly Ltd. All rights reserved.
+//  Created by Fraser Scott-Morrison on 1/03/18.
+//  Copyright © 2018 IdleHandsApps Ltd. All rights reserved.
 //
 
 import UIKit

@@ -37,6 +37,8 @@ extension Planet: Codable {
     
     // MARK: Planet Decodable
     init(from decoder: Decoder) throws {
+        
+        // to gather all decoding errors implement safeContainer() rather than the usual container()
         var container = try decoder.safeContainer(keyedBy: CodingKeys.self)
         
         let _name = (try container.decodeSafe(String.self, forKey: .name))
@@ -50,9 +52,8 @@ extension Planet: Codable {
             let daysForRotation = _daysForRotation,
             let isHabitable = _isHabitable
             else {
+                // the reference can be your object identifier to help find the issue in your data
                 throw container.getErrors(modelType: Planet.self, reference: _name)
-                //let context = DecodingError.Context(codingPath: [], debugDescription: "Planet object requires correct format")
-                //throw DecodingError.typeMismatch(String.self, context)
         }
         self.name = name
         self.diameter = diameter

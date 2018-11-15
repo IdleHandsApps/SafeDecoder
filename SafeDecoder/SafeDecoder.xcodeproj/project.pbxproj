@@ -21,6 +21,7 @@
 		4C16941A219E138900897260 /* SolarSystem.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C169419219E138900897260 /* SolarSystem.json */; };
 		4C16941D219E1ACA00897260 /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16941C219E1ACA00897260 /* SolarSystem.swift */; };
 		4C16941F219E1CBB00897260 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16941E219E1CBB00897260 /* Planet.swift */; };
+		4C169421219E373000897260 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C169420219E373000897260 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4C169419219E138900897260 /* SolarSystem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SolarSystem.json; sourceTree = "<group>"; };
 		4C16941C219E1ACA00897260 /* SolarSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystem.swift; sourceTree = "<group>"; };
 		4C16941E219E1CBB00897260 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		4C169420219E373000897260 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				4C1693FC219E040200897260 /* Assets.xcassets */,
 				4C1693FE219E040200897260 /* LaunchScreen.storyboard */,
 				4C169401219E040200897260 /* Info.plist */,
+				4C169420219E373000897260 /* README.md */,
 			);
 			path = SafeDecoder;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				4C169400219E040200897260 /* LaunchScreen.storyboard in Resources */,
 				4C1693FD219E040200897260 /* Assets.xcassets in Resources */,
+				4C169421219E373000897260 /* README.md in Resources */,
 				4C1693FB219E040000897260 /* Main.storyboard in Resources */,
 				4C16941A219E138900897260 /* SolarSystem.json in Resources */,
 			);

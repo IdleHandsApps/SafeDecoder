@@ -1,8 +1,8 @@
 //
-//  SafeDecoderLogger.swift
-//  SafeDecoder
+//  SafeDecoder.swift
+//  IdleHandsApps
 //
-//  Created by Fraser on 16/11/18.
+//  Created by Fraser Scott-Morrison on 16/11/18.
 //  Copyright © 2018 IdleHandsApps. All rights reserved.
 //
 

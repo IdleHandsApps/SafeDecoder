@@ -31,9 +31,12 @@ extension SolarSystem: Codable {
     
     // MARK: SolarSystem Decodable
     public init(from decoder: Decoder) throws {
+        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         name = try container.decode(String.self, forKey: .name)
+        
+        // to parse an array without re-thowing an error, call decodeArray()
         planets = try container.decodeArray(Planet.self, forKey: .planets)
     }
 }

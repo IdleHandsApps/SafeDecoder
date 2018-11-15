@@ -1,0 +1,45 @@
+{
+    "name": "Solar System",
+    "planets": [{
+        "name": "Mercury",
+        "diameter": 4879,
+        "daysForRotation": 58.646,
+        "isHabitable": false
+    }, {
+        "name": "Venus",
+        "diameter": 12104,
+        "daysForRotation": "243.025",
+        "isHabitable": false
+    }, {
+        "name": "Earth",
+        "diameter": 12756.2,
+        "daysForRotation": 1,
+        "isHabitable": true
+    }, {
+        "name": "Mars",
+        "diameter": 6792.4,
+        "daysForRotation": 1.025957,
+        "isHabitable": false
+    }, {
+        "name": "Jupiter",
+        "diameter": 142984,
+        "daysForRotation": 0.4165,
+        "isHabitable": false
+    }, {
+        "name": "Saturn",
+        "diameter": 120536,
+        "daysForRotation": 0.4375,
+        "isHabitable": false
+    }, {
+        "name": "Uranus",
+        "diameter": 51118,
+        "daysForRotation": "0.71875",
+        "wrongKeyName": false
+    }, {
+        "name": "Neptune",
+        "diameter": 49528,
+        "daysForRotation": 0.6667,
+        "isHabitable": false
+    }]
+}
+

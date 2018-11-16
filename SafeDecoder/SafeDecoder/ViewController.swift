@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    var solarSystem: SolarSystem!
+    var solarSystem: SolarSystem?
     var errors = [String]()
     
     override func viewDidLoad() {
@@ -74,7 +74,7 @@ extension ViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return self.solarSystem.planets.count
+            return self.solarSystem?.planets.count ?? 0
         }
         else {
             return errors.count
@@ -85,7 +85,7 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
         if indexPath.section == 0 {
-            cell.textLabel?.text = self.solarSystem.planets[indexPath.row].name
+            cell.textLabel?.text = self.solarSystem!.planets[indexPath.row].name
             cell.backgroundColor = UIColor.white
         }
         else {

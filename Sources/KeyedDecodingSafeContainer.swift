@@ -26,8 +26,12 @@ public struct KeyedDecodingSafeContainer<K> : KeyedDecodingContainerProtocol whe
     public var errors = [(String, DecodingError)]()
     //public var decodingSafeError: DecodingSafeError?
     
-    func getErrors<T>(modelType: T.Type, reference: String? = nil) -> DecodingSafeError {
-        return DecodingSafeError.structErrors(type: String(describing: modelType), reference: reference, errors: self.errors)
+    func getErrors<T>(modelType: T.Type, reference: String? = nil, doLog: Bool = true) -> DecodingSafeError {
+        let error = DecodingSafeError.structErrors(type: String(describing: modelType), reference: reference, errors: self.errors)
+        if true {
+            SafeDecoder.logger?(error, String(describing: T.self))
+        }
+        return error
     }
     
     /// Decodes a value of the given type for the given key.
@@ -65,8 +69,46 @@ public struct KeyedDecodingSafeContainer<K> : KeyedDecodingContainerProtocol whe
             return nil
         }
     }
-
     
+    /// Decodes a value of the given type for the given key.
+    ///
+    /// - parameter type: The type of value to decode.
+    /// - parameter key: The key that the decoded value is associated with.
+    /// - returns: A value of the requested type, if present for the given key and convertible to the requested type.
+    /// - throws: `DecodingError.typeMismatch` if the encountered encoded value is not convertible to the requested type.
+    /// - throws: `DecodingError.keyNotFound` if `self` does not have an entry for the given key.
+    /// - throws: `DecodingError.valueNotFound` if `self` has a null entry for the given key.
+    public mutating func decodeArraySafe<T>(_ type: T.Type, forKey key: KeyedDecodingContainer<K>.Key, doLog: Bool = true) throws -> [T]? where T : Decodable {
+        do {
+            return try self.keyedDecodingContainer.decodeArray(type, forKey: key, doLog: doLog)
+            //var unkeyedContainer = try self.nestedUnkeyedContainer(forKey: key)
+            //return try unkeyedContainer.decodeArray(type, doLog: doLog)
+        }
+        catch let error as DecodingError {
+            self.errors.append((key.stringValue, error))
+            return nil
+        }
+    }
+    
+    /// Decodes a value of the given type for the given key.
+    ///
+    /// - parameter type: The type of value to decode.
+    /// - parameter key: The key that the decoded value is associated with.
+    /// - returns: A value of the requested type, if present for the given key and convertible to the requested type.
+    /// - throws: `DecodingError.typeMismatch` if the encountered encoded value is not convertible to the requested type.
+    /// - throws: `DecodingError.keyNotFound` if `self` does not have an entry for the given key.
+    /// - throws: `DecodingError.valueNotFound` if `self` has a null entry for the given key.
+    public mutating func decodeArraySafeIfPresent<T>(_ type: T.Type, forKey key: KeyedDecodingContainer<K>.Key, doLog: Bool = true) throws -> [T]? where T : Decodable {
+        do {
+            return try self.keyedDecodingContainer.decodeArrayIfPresent(type, forKey: key, doLog: doLog)
+            //var unkeyedContainer = try self.nestedUnkeyedContainer(forKey: key)
+            //return try unkeyedContainer.decodeArray(type, doLog: doLog)
+        }
+        catch let error as DecodingError {
+            self.errors.append((key.stringValue, error))
+            return nil
+        }
+    }
     
     
     

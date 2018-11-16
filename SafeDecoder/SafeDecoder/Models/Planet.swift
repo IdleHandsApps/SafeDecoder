@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Planet {
     var name: String = ""
@@ -41,6 +42,8 @@ extension Planet: Codable {
         // to gather all decoding errors implement safeContainer() rather than the usual container()
         var container = try decoder.safeContainer(keyedBy: CodingKeys.self)
         
+        
+        // then container.decodeSafe() is needed so that optionals are returned
         let _name = (try container.decodeSafe(String.self, forKey: .name))
         let _diameter = (try container.decodeSafe(Double.self, forKey: .diameter))
         let _daysForRotation = (try container.decodeSafe(Double.self, forKey: .daysForRotation))
@@ -53,11 +56,40 @@ extension Planet: Codable {
             let isHabitable = _isHabitable
             else {
                 // the reference can be your object identifier to help find the issue in your data
-                throw container.getErrors(modelType: Planet.self, reference: _name)
+                throw container.getErrors(modelType: type(of: self), reference: _name)
         }
         self.name = name
         self.diameter = diameter
         self.daysForRotation = daysForRotation
         self.isHabitable = isHabitable
+    }
+}
+
+struct MyModel: Decodable {
+    
+    var myId: String
+    var myArray: [CGRect]
+    
+    enum CodingKeys: String, CodingKey {
+        case myId
+        case myArray
+    }
+    
+    public init(from decoder: Decoder) throws {
+        var container = try decoder.safeContainer(keyedBy: CodingKeys.self)
+        
+        let _myId = try container.decodeSafe(String.self, forKey: .myId)
+        let _myArray = try container.decodeArraySafe(CGRect.self, forKey: .myArray)
+        
+        guard
+            let myId = _myId,
+            let myArray = _myArray
+            else {
+                // the reference can be your object identifier to help find the issue with your data
+                throw container.getErrors(modelType: MyModel.self, reference: _myId)
+        }
+        
+        self.myId = myId
+        self.myArray = myArray
     }
 }

@@ -21,9 +21,6 @@ extension UnkeyedDecodingContainer {
                 let item = try self.decode(T.self)
                 array.append(item)
             } catch let error {
-                if doLog {
-                    SafeDecoder.logger?(error, String(describing: T.self))
-                }
                 // hack to increment currentIndex
                 _ = try self.decode(DummyCodable.self)
             }

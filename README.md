@@ -3,23 +3,15 @@
 </p>
 
 
-# SafeDecoder
-A Codable extension to decode arrays and to catch and log all decoding failures  
-
-
-SafeDecoder [![Language: Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
+# SafeDecoder [![Language: Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
 ------------------------------
-
-SafeDecoder makes two improvements for Codable models. When decoding arrays it can skip over a invalid item, allowing your app to show all the valid items. It can also collect all the decoding errors and send them to your logging class or service
+A Codable extension to decode arrays and to catch and log all decoding failures  
 
 ## Features
 
-* Just a few lines of code and StatusBarOverlay will automatically show & hide when internet connection is lost & regained
-* Support for apps that hide the status bar permanently
-* Support for the iPhone X Notch
-* Optionally you can choose to show the status bar anytime with custom text, eg for Debug or Demo modes
-* Optionally you can show a drop down message, below the status bar, with a click handle, great for nonintrusive alerts
-* Fully customisable colors & text
+SafeDecoder makes two improvements for Codable models
+* When decoding arrays it can skip over invalid objects, allowing your app to show just valid objects
+* It can also collect all the decoding errors and send them to your logging class or service
 
 ## How to install
 
@@ -108,7 +100,7 @@ https://github.com/IdleHandsApps/UINavigationBar-Transparent
 
 * Fraser Scott-Morrison (fraserscottmorrison@me.com)
 
-It'd be great to hear about any cool apps that are using StatusBarOverlay
+It'd be great to hear about any cool apps that are using SafeDecoder
 
 ## License
 

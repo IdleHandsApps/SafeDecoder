@@ -4,8 +4,7 @@
 
 
 # SafeDecoder
-A Codable helper to decode arrays and catches all decoding issues 
-
+A Codable extension to decode arrays and to catch and log all decoding failures  
 
 
 SafeDecoder [![Language: Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
@@ -37,18 +36,18 @@ import SafeDecoder
 
 struct MyModel: Decodable {
 
-var myArray: [CGRect]
+    var myArray: [CGRect]
 
-enum CodingKeys: String, CodingKey {
-case myArray
-}
+    enum CodingKeys: String, CodingKey {
+        case myArray
+    }
 
-public init(from decoder: Decoder) throws {
-let container = try decoder.container(keyedBy: CodingKeys.self)
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
 
-// to parse an array without re-thowing an error, call decodeArray()
-myArray = try container.decodeArray(CGRect.self, forKey: .myArray)
-}
+        // to parse an array without re-thowing an error, call decodeArray()
+        myArray = try container.decodeArray(CGRect.self, forKey: .myArray)
+    }
 }
 ```
 
@@ -66,31 +65,31 @@ import SafeDecoder
 
 struct MyModel: Decodable {
 
-var myId: String
-var myArray: [CGRect]
+    var myId: String
+    var myArray: [CGRect]
 
-enum CodingKeys: String, CodingKey {
-case myId
-case myArray
-}
+    enum CodingKeys: String, CodingKey {
+        case myId
+        case myArray
+    }
 
-public init(from decoder: Decoder) throws {
-var container = try decoder.safeContainer(keyedBy: CodingKeys.self)
+    public init(from decoder: Decoder) throws {
+        var container = try decoder.safeContainer(keyedBy: CodingKeys.self)
 
-let _myId = try container.decodeSafe(String.self, forKey: .myId)
-let _myArray = try container.decodeArraySafe(CGRect.self, forKey: .myArray)
+        let _myId = try container.decodeSafe(String.self, forKey: .myId)
+        let _myArray = try container.decodeArraySafe(CGRect.self, forKey: .myArray)
 
-guard
-let myId = _myId,
-let myArray = _myArray
-else {
-// the reference can be your object identifier to help find the issue with your data
-throw container.getErrors(modelType: MyModel.self, reference: _myId)
-}
+        guard
+            let myId = _myId,
+            let myArray = _myArray
+            else {
+                // this reference can be your object identifier to help find the issue with your data
+                throw container.getErrors(modelType: MyModel.self, reference: _myId)
+        }
 
-self.myId = myId
-self.myArray = myArray
-}
+        self.myId = myId
+        self.myArray = myArray
+    }
 }
 ```
 

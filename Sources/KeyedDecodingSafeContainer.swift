@@ -26,7 +26,7 @@ public struct KeyedDecodingSafeContainer<K> : KeyedDecodingContainerProtocol whe
     public var errors = [(String, DecodingError)]()
     //public var decodingSafeError: DecodingSafeError?
     
-    func getErrors<T>(modelType: T.Type, reference: String? = nil, doLog: Bool = true) -> DecodingSafeError {
+    public func getErrors<T>(modelType: T.Type, reference: String? = nil, doLog: Bool = true) -> DecodingSafeError {
         let error = DecodingSafeError.structErrors(type: String(describing: modelType), reference: reference, errors: self.errors)
         if true {
             SafeDecoder.logger?(error, String(describing: T.self))

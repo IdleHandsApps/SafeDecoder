@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SafeDecoder: NSObject {
-    static var logger: ((_ error: Error, _ typeName: String) -> ())?
+public class SafeDecoder: NSObject {
+    public static var logger: ((_ error: Error, _ typeName: String) -> ())?
 }

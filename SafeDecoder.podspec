@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SafeDecoder"
-  s.version          = "1.0"
+  s.version          = "1.1"
   s.summary          = "A Codable extension to decode arrays and to catch & log all decoding failures"
 
   s.description      = <<-DESC

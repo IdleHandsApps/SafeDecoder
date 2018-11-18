@@ -2,10 +2,11 @@
 <img alt="SafeDecoder" src="https://github.com/IdleHandsApps/StatusBarOverlay/blob/master/StatusBarOverlay/StatusBarOverlay/StatusBarOverlay/Assets.xcassets/AppIcon.appiconset/Logo-76.png" />
 </p>
 
-
 # SafeDecoder [![Language: Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
 
 A Codable extension to decode arrays and to catch & log all decoding failures  
+
+![alt preview](https://github.com/IdleHandsApps/SafeDecoder/blob/files/Screenshot.png)
 
 ## Features
 
@@ -46,9 +47,8 @@ struct MyModel: Decodable {
 To collect all decoding errors for logging, first, implement your own logging here
 ```swift
 SafeDecoder.logger = { error, typeName in
-
-// replace with a call to your own logging service
-print(error)
+    // replace with a call to your own logging library/service
+    print(error)
 }
 ```
 Then in you model's init(from decoder:) call decoder.safeContainer(), then call container.decodeSafe() or container.decodeArraySafe()

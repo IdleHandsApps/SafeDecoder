@@ -12,16 +12,15 @@
 		4C1693FB219E040000897260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1693F9219E040000897260 /* Main.storyboard */; };
 		4C1693FD219E040200897260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1693FC219E040200897260 /* Assets.xcassets */; };
 		4C169400219E040200897260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1693FE219E040200897260 /* LaunchScreen.storyboard */; };
-		4C16940D219E051500897260 /* Decoder+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C169408219E051500897260 /* Decoder+Safe.swift */; };
-		4C16940E219E051500897260 /* DecodingSafeError+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C169409219E051500897260 /* DecodingSafeError+Safe.swift */; };
-		4C16940F219E051500897260 /* KeyedDecodingContainerProtocol+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16940A219E051500897260 /* KeyedDecodingContainerProtocol+Safe.swift */; };
-		4C169410219E051500897260 /* KeyedDecodingSafeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16940B219E051500897260 /* KeyedDecodingSafeContainer.swift */; };
-		4C169411219E051500897260 /* UnkeyedDecodingContainer+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16940C219E051500897260 /* UnkeyedDecodingContainer+Safe.swift */; };
-		4C169415219E08A800897260 /* SafeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C169414219E08A800897260 /* SafeDecoder.swift */; };
 		4C16941A219E138900897260 /* SolarSystem.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C169419219E138900897260 /* SolarSystem.json */; };
 		4C16941D219E1ACA00897260 /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16941C219E1ACA00897260 /* SolarSystem.swift */; };
 		4C16941F219E1CBB00897260 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16941E219E1CBB00897260 /* Planet.swift */; };
-		4C169421219E373000897260 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C169420219E373000897260 /* README.md */; };
+		4C16942D21A201AF00897260 /* Decoder+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16942721A201AF00897260 /* Decoder+Safe.swift */; };
+		4C16942E21A201AF00897260 /* SafeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16942821A201AF00897260 /* SafeDecoder.swift */; };
+		4C16942F21A201AF00897260 /* KeyedDecodingContainerProtocol+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16942921A201AF00897260 /* KeyedDecodingContainerProtocol+Safe.swift */; };
+		4C16943021A201AF00897260 /* DecodingSafeError+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16942A21A201AF00897260 /* DecodingSafeError+Safe.swift */; };
+		4C16943121A201AF00897260 /* KeyedDecodingSafeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16942B21A201AF00897260 /* KeyedDecodingSafeContainer.swift */; };
+		4C16943221A201AF00897260 /* UnkeyedDecodingContainer+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16942C21A201AF00897260 /* UnkeyedDecodingContainer+Safe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +31,17 @@
 		4C1693FC219E040200897260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1693FF219E040200897260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C169401219E040200897260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C169408219E051500897260 /* Decoder+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Decoder+Safe.swift"; path = "../../../Sources/Decoder+Safe.swift"; sourceTree = "<group>"; };
-		4C169409219E051500897260 /* DecodingSafeError+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DecodingSafeError+Safe.swift"; path = "../../../Sources/DecodingSafeError+Safe.swift"; sourceTree = "<group>"; };
-		4C16940A219E051500897260 /* KeyedDecodingContainerProtocol+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "KeyedDecodingContainerProtocol+Safe.swift"; path = "../../../Sources/KeyedDecodingContainerProtocol+Safe.swift"; sourceTree = "<group>"; };
-		4C16940B219E051500897260 /* KeyedDecodingSafeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyedDecodingSafeContainer.swift; path = ../../../Sources/KeyedDecodingSafeContainer.swift; sourceTree = "<group>"; };
-		4C16940C219E051500897260 /* UnkeyedDecodingContainer+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UnkeyedDecodingContainer+Safe.swift"; path = "../../../Sources/UnkeyedDecodingContainer+Safe.swift"; sourceTree = "<group>"; };
-		4C169414219E08A800897260 /* SafeDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SafeDecoder.swift; path = ../../../Sources/SafeDecoder.swift; sourceTree = "<group>"; };
 		4C169419219E138900897260 /* SolarSystem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SolarSystem.json; sourceTree = "<group>"; };
 		4C16941C219E1ACA00897260 /* SolarSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystem.swift; sourceTree = "<group>"; };
 		4C16941E219E1CBB00897260 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		4C169420219E373000897260 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		4C16942421A201A200897260 /* SafeDecoder.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SafeDecoder.podspec; path = ../../SafeDecoder.podspec; sourceTree = "<group>"; };
+		4C16942721A201AF00897260 /* Decoder+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decoder+Safe.swift"; sourceTree = "<group>"; };
+		4C16942821A201AF00897260 /* SafeDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeDecoder.swift; sourceTree = "<group>"; };
+		4C16942921A201AF00897260 /* KeyedDecodingContainerProtocol+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainerProtocol+Safe.swift"; sourceTree = "<group>"; };
+		4C16942A21A201AF00897260 /* DecodingSafeError+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecodingSafeError+Safe.swift"; sourceTree = "<group>"; };
+		4C16942B21A201AF00897260 /* KeyedDecodingSafeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyedDecodingSafeContainer.swift; sourceTree = "<group>"; };
+		4C16942C21A201AF00897260 /* UnkeyedDecodingContainer+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnkeyedDecodingContainer+Safe.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			children = (
 				4C16941B219E1A8400897260 /* Models */,
 				4C169416219E135F00897260 /* JsonData */,
-				4C169407219E050000897260 /* Sources */,
+				4C16942621A201AF00897260 /* Sources */,
 				4C1693F5219E040000897260 /* AppDelegate.swift */,
 				4C1693F7219E040000897260 /* ViewController.swift */,
 				4C1693F9219E040000897260 /* Main.storyboard */,
@@ -84,21 +84,9 @@
 				4C1693FE219E040200897260 /* LaunchScreen.storyboard */,
 				4C169401219E040200897260 /* Info.plist */,
 				4C169420219E373000897260 /* README.md */,
+				4C16942421A201A200897260 /* SafeDecoder.podspec */,
 			);
 			path = SafeDecoder;
-			sourceTree = "<group>";
-		};
-		4C169407219E050000897260 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				4C169408219E051500897260 /* Decoder+Safe.swift */,
-				4C169409219E051500897260 /* DecodingSafeError+Safe.swift */,
-				4C16940C219E051500897260 /* UnkeyedDecodingContainer+Safe.swift */,
-				4C16940A219E051500897260 /* KeyedDecodingContainerProtocol+Safe.swift */,
-				4C16940B219E051500897260 /* KeyedDecodingSafeContainer.swift */,
-				4C169414219E08A800897260 /* SafeDecoder.swift */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		4C169416219E135F00897260 /* JsonData */ = {
@@ -116,6 +104,20 @@
 				4C16941C219E1ACA00897260 /* SolarSystem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4C16942621A201AF00897260 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4C16942721A201AF00897260 /* Decoder+Safe.swift */,
+				4C16942821A201AF00897260 /* SafeDecoder.swift */,
+				4C16942921A201AF00897260 /* KeyedDecodingContainerProtocol+Safe.swift */,
+				4C16942A21A201AF00897260 /* DecodingSafeError+Safe.swift */,
+				4C16942B21A201AF00897260 /* KeyedDecodingSafeContainer.swift */,
+				4C16942C21A201AF00897260 /* UnkeyedDecodingContainer+Safe.swift */,
+			);
+			name = Sources;
+			path = ../../Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +180,6 @@
 			files = (
 				4C169400219E040200897260 /* LaunchScreen.storyboard in Resources */,
 				4C1693FD219E040200897260 /* Assets.xcassets in Resources */,
-				4C169421219E373000897260 /* README.md in Resources */,
 				4C1693FB219E040000897260 /* Main.storyboard in Resources */,
 				4C16941A219E138900897260 /* SolarSystem.json in Resources */,
 			);
@@ -191,16 +192,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C169410219E051500897260 /* KeyedDecodingSafeContainer.swift in Sources */,
 				4C16941D219E1ACA00897260 /* SolarSystem.swift in Sources */,
+				4C16942F21A201AF00897260 /* KeyedDecodingContainerProtocol+Safe.swift in Sources */,
 				4C1693F8219E040000897260 /* ViewController.swift in Sources */,
-				4C169411219E051500897260 /* UnkeyedDecodingContainer+Safe.swift in Sources */,
-				4C16940F219E051500897260 /* KeyedDecodingContainerProtocol+Safe.swift in Sources */,
-				4C16940E219E051500897260 /* DecodingSafeError+Safe.swift in Sources */,
+				4C16942D21A201AF00897260 /* Decoder+Safe.swift in Sources */,
 				4C1693F6219E040000897260 /* AppDelegate.swift in Sources */,
-				4C16940D219E051500897260 /* Decoder+Safe.swift in Sources */,
-				4C169415219E08A800897260 /* SafeDecoder.swift in Sources */,
+				4C16943221A201AF00897260 /* UnkeyedDecodingContainer+Safe.swift in Sources */,
 				4C16941F219E1CBB00897260 /* Planet.swift in Sources */,
+				4C16943121A201AF00897260 /* KeyedDecodingSafeContainer.swift in Sources */,
+				4C16942E21A201AF00897260 /* SafeDecoder.swift in Sources */,
+				4C16943021A201AF00897260 /* DecodingSafeError+Safe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

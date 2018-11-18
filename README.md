@@ -4,8 +4,8 @@
 
 
 # SafeDecoder [![Language: Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
-------------------------------
-A Codable extension to decode arrays and to catch and log all decoding failures  
+
+A Codable extension to decode arrays and to catch & log all decoding failures  
 
 ## Features
 

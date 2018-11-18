@@ -20,7 +20,7 @@ extension UnkeyedDecodingContainer {
             do {
                 let item = try self.decode(T.self)
                 array.append(item)
-            } catch let error {
+            } catch {
                 // hack to increment currentIndex
                 _ = try self.decode(DummyCodable.self)
             }

@@ -8,6 +8,8 @@ A Codable extension to decode arrays and to catch & log all decoding failures
 
 <img src="https://github.com/IdleHandsApps/SafeDecoder/blob/files/Screenshot.png" align="left" width="375">
 
+
+
 ## Features
 
 SafeDecoder makes two improvements for Codable models
@@ -21,7 +23,7 @@ Add this to your CocoaPods Podfile
 pod 'SafeDecoder'
 ```
 
-## How to use
+## How to decode arrays
 
 To decode arrays safely, in you model's init(from decoder:) just call container.decodeArray() and pass in the model type in your array
 ```swift
@@ -44,7 +46,9 @@ struct MyModel: Decodable {
 }
 ```
 
-To collect all decoding errors for logging, implement your own logging here
+## How to decode safely
+
+If you want to collect all decoding errors for logging, implement your own logging code here
 ```swift
 SafeDecoder.logger = { error, typeName in
     // replace with a call to your own logging library/service

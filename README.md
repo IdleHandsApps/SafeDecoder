@@ -44,14 +44,14 @@ struct MyModel: Decodable {
 }
 ```
 
-To collect all decoding errors for logging, first, implement your own logging here
+To collect all decoding errors for logging, implement your own logging here
 ```swift
 SafeDecoder.logger = { error, typeName in
     // replace with a call to your own logging library/service
     print(error)
 }
 ```
-Then in you model's init(from decoder:) call decoder.safeContainer(), then call container.decodeSafe() or container.decodeArraySafe()
+Then in your model's init(from decoder:) call decoder.safeContainer(), then call container.decodeSafe() or container.decodeArraySafe()
 ```swift
 import SafeDecoder
 

@@ -56,6 +56,8 @@ SafeDecoder.logger = { error, typeName in
 }
 ```
 Then in your model's init(from decoder:) call decoder.safeContainer(), then call container.decodeSafe() or container.decodeArraySafe()
+
+SafeDecoder will collect all errors and log them before throwing the exception
 ```swift
 import SafeDecoder
 

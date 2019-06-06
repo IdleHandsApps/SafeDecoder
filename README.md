@@ -6,7 +6,7 @@
 
 A Codable extension to decode arrays and to catch & log all decoding failures  
 
-<img src="https://github.com/IdleHandsApps/SafeDecoder/blob/files/Screenshot.png" align="left" width="650">
+<img src="https://github.com/IdleHandsApps/SafeDecoder/blob/files/Screenshot.png" align="left" width="100%">
 
 
 

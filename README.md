@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="SafeDecoder" src="https://github.com/IdleHandsApps/StatusBarOverlay/blob/master/StatusBarOverlay/StatusBarOverlay/StatusBarOverlay/Assets.xcassets/AppIcon.appiconset/Logo-76.png" />
+<img alt="SafeDecoder" src="https://github.com/IdleHandsApps/SafeDecoder/blob/master/SafeDecoder/SafeDecoder/Assets.xcassets/AppIcon.appiconset/Icon-76.png" />
 </p>
 
 # SafeDecoder [![Language: Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)

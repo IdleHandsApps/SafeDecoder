@@ -102,6 +102,7 @@ extension DecodingSafeError: CustomStringConvertible {
         for (key, error) in errors {
             
             var errorName = "unknown"
+            
             switch error {
             case .typeMismatch:
                 errorName = "typeMismatch"
@@ -111,6 +112,8 @@ extension DecodingSafeError: CustomStringConvertible {
                 errorName = "keyNotFound"
             case .dataCorrupted:
                 errorName = "dataCorrupted"
+            @unknown default:
+                errorName = "unknown"
             }
             
             //if multiple && verbosity == .single {
